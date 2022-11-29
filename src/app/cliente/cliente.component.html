@@ -1,0 +1,33 @@
+<div class="">
+    <h1 class="mt-3 text-center">Clientes</h1>
+    <div class="col-md-12">
+        <div class="col-lg-12" style="text-align: right;">
+            <button class="btn btn-primary btn-sm" [routerLink]="['/cadastro']">Novo cliente</button>
+        </div>
+        <table class="table" style="margin-top: 3em">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>CPF</th>
+                    <th>ENDEREÇO</th>
+                    <th>NASCIMENTO</th>
+                    <th>TELEFONE</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>{{cliente.nome | uppercase}}</td>
+                    <td>{{cliente.cpf}}</td> 
+                    <td>{{cliente.endereco | uppercase}}</td>    
+                    <td>{{cliente.nascimento | date: 'dd-MM-yyyy'}}</td>
+                    <td>{{cliente.telefone}}</td>   
+                    <td>
+                        <button class="btn btn-warning btn-sm" [routerLink]="['/edicao', cliente.id]">Editar</button>
+                        <button class="btn btn-danger ms-1 btn-sm" (click)="remove(cliente)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

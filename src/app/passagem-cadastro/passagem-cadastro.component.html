@@ -1,0 +1,31 @@
+<h1 class="mt-3 text-center">Cadastro de passagem</h1>
+<form [formGroup]="passagemForm" (ngSubmit)="onSubmit()" class="col-8 offset-2">
+  <div class="mb-3">
+    <label for="dataIda">Data ida: </label>
+    <input class="form-control" id="dataIda" type="date" formControlName="dataIda" />
+  </div>
+  <div class="mb-3">
+    <label for="dataVolta">Data volta: </label>
+    <input class="form-control" id="dataVolta" type="date" formControlName="dataVolta" />
+  </div>
+  <div class="mb-3">
+    <label for="origem">Origem: </label>
+    <input class="form-control" id="origem" type="text" formControlName="origem" />
+  </div>
+  <div class="mb-3">
+    <label for="destino">Destino: </label>
+    <input class="form-control" id="destino" type="text" formControlName="destino" />
+  </div>
+  <div class="mb-3">
+    <label for="tipoPassagem">Tipo passagem: </label>
+    <select name="tipoPassagem" class="form-control" id="tipoPassagem" type="text" formControlName="tipoPassagem">
+        <option value="Primeira classe">Primeira classe</option>
+        <option value="Executiva">Executiva</option>
+        <option value="Economica">Economica</option>
+    </select>
+  </div>
+  <div class="mt-5 text-center">
+      <button type="submit" [disabled]="!passagemForm.valid" class="btn btn-success">Cadastrar</button>
+      <button type="reset" class="btn btn-secondary ms-1">Cancelar</button>
+  </div>
+</form>

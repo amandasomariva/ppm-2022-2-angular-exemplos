@@ -1,0 +1,56 @@
+{
+  "cliente": [
+    {
+      "id": 2,
+      "nome": "maria eduarda matos cardoso",
+      "cpf": "10638097975",
+      "endereco": "Criciúma",
+      "nascimento": "2002-02-24",
+      "telefone": "(48) 99660-0088"
+    },
+    {
+      "id": 3,
+      "nome": "Amanda",
+      "cpf": "11185033901",
+      "endereco": "Cocal do Sul",
+      "nascimento": "2004-01-01",
+      "telefone": "(48) 996702056"
+    }
+  ],
+  "pacote": [
+    {
+      "id": 1,
+      "valor": 200,
+      "roteiro": "Estudar na Esucri",
+      "agente": "Andreia",
+      "passagem": "Criciúma",
+      "cliente": "Amanda"
+    },
+    {
+      "id": 2,
+      "valor": 250,
+      "roteiro": "Estudar na Esucri",
+      "agente": "Andreia",
+      "passagem": "Criciúma",
+      "cliente": "maria eduarda matos cardoso"
+    }
+  ],
+  "passagem": [
+    {
+      "id": 1,
+      "dataIda": "2004-01-22",
+      "dataVolta": "2010-02-01",
+      "origem": "Cocal do Sul",
+      "destino": "Criciúma",
+      "tipoPassagem": "Economica"
+    },
+    {
+      "id": 2,
+      "dataIda": "2022-12-01",
+      "dataVolta": "2023-01-01",
+      "origem": "São Paulo",
+      "destino": "Santa Catarina",
+      "tipoPassagem": "Primeira classe"
+    }
+  ]
+}

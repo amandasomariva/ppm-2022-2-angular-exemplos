@@ -1,0 +1,33 @@
+<div class="">
+    <h1 class="mt-3 text-center">Passagens</h1>
+    <div class="col-md-12">
+        <div class="col-lg-12" style="text-align: right;">
+            <button class="btn btn-primary btn-sm" [routerLink]="['/cadastroPassagem']">Nova passagem</button>
+        </div>
+        <table class="table" style="margin-top: 3em">
+            <thead>
+                <tr>
+                    <th>DATA IDA</th>
+                    <th>DATA VOLTA</th>
+                    <th>ORIGEM</th>
+                    <th>DESTINO</th>
+                    <th>TIPO PASSAGEM</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let passagem of passagens">
+                    <td>{{passagem.dataIda | date: 'dd-MM-yyyy'}}</td>
+                    <td>{{passagem.dataVolta | date: 'dd-MM-yyyy'}}</td> 
+                    <td>{{passagem.origem | uppercase}}</td>   
+                    <td>{{passagem.destino | uppercase}}</td> 
+                    <td>{{passagem.tipoPassagem | uppercase}}</td>   
+                    <td>
+                        <button class="btn btn-warning btn-sm" [routerLink]="['/edicaoPassagem', passagem.id]">Editar</button>
+                        <button class="btn btn-danger ms-1 btn-sm" (click)="remove(passagem)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="">
+    <h1 class="mt-3 text-center">Pacotes de viagem</h1>
+    <div class="col-md-12">
+        <div class="col-lg-12" style="text-align: right;">
+            <button class="btn btn-primary btn-sm" [routerLink]="['/cadastroPacote']" >Novo pacote</button>
+        </div>
+        <table class="table" style="margin-top: 3em">
+            <thead>
+                <tr>
+                    <th>CLIENTE</th>
+                    <th>PASSAGEM</th>
+                    <th>ROTEIRO</th>
+                    <th>AGENTE</th>
+                    <th>VALOR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pacote of pacotes">
+                    <td>{{pacote.cliente}}</td>    
+                    <td>{{pacote.passagem}}</td> 
+                    <td>{{pacote.roteiro | uppercase}}</td> 
+                    <td>{{pacote.agente | uppercase}}</td> 
+                    <td>{{pacote.valor | currency : 'BRL'}}</td>  
+                    <td>
+                        <button class="btn btn-warning btn-sm" [routerLink]="['/edicaoPacote', pacote.id]">Editar</button>
+                        <button class="btn btn-danger ms-1 btn-sm" (click)="remove(pacote)">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

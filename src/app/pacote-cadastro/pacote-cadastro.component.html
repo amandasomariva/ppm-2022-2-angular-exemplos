@@ -1,0 +1,44 @@
+<h1 class="mt-3 text-center">Cadastro de pacote de viagem</h1>
+<form [formGroup]="pacoteForm" (ngSubmit)="onSubmit()" class="col-8 offset-2">
+  <div class="mb-3">
+    <label for="cliente">Cliente: </label>
+    <select class="form-control" id="cliente" formControlName="cliente">
+      <option *ngFor="let cliente of clientes" [ngValue]="cliente.nome">
+        {{cliente.nome | uppercase}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="passagem">Passagem: </label>
+    <select class="form-control" id="passagem" formControlName="passagem">
+      <option *ngFor="let passagem of passagens" [ngValue]="passagem.destino">
+        {{passagem.destino | uppercase}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="roteiro">Roteiro: </label>
+    <input class="form-control" id="roteiro" type="text" formControlName="roteiro" />
+  </div>
+  <div class="mb-3">
+    <label for="agente">Agente: </label>
+    <input class="form-control" id="agente" type="text" formControlName="agente" />
+  </div>
+  <div class="mb-3">
+    <label for="valor">Valor: </label>
+    <input class="form-control" id="valor" type="number" formControlName="valor" />
+  </div>
+  <!--<div class="mb-3">
+    <label for="cliente">Cliente: </label>
+    <select class="form-control" id="cliente" formControlName="cliente">
+      <option *ngFor="let cliente of clientes" [value]="cliente.nome">{{cliente.nome}}</option>
+    </select>
+  </div>-->
+  
+
+
+  <div class="mt-5 text-center">
+    <button type="submit" [disabled]="!pacoteForm.valid" class="btn btn-success">Cadastrar</button>
+    <button type="reset" class="btn btn-secondary ms-1">Cancelar</button>
+  </div>
+</form>

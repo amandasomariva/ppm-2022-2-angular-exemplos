@@ -1,0 +1,35 @@
+<!-- 
+<hello-world></hello-world>
+<data-hora></data-hora> 
+<cliente-cadastro></cliente-cadastro>
+<cliente></cliente>
+-->
+<nav class="navbar  navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['listagem']">Listagem cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['cadastro']">Cadastro cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['listagemPacote']">Listagem pacote</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['cadastroPacote']">Cadastro pacote</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['listagemPassagem']">Listagem passagem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['cadastroPassagem']">Cadastro passagem</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
